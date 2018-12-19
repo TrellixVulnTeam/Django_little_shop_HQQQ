@@ -1,0 +1,20 @@
+{% if book_list %}
+    {% for book in book_list %}
+        {{ book.title }}
+        {{ book.summary }}
+    {% endfor %}
+    {% if is_paginated %}
+        {% if page_obj.has_previous %}
+            <a href="book/list?page= {{ page_obj.previous_page_number }}"></a>
+        
+        {% endif %}
+        <a href="book/list?page= {{ page_obj.next_page_number }}"></a>
+        a
+        {% if page_obj.has_next %}
+        
+        
+        {% endif %}
+    {% endif %}
+{% else %}
+    <h1>No books found!!</h1>
+{% endif %}

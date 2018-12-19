@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "my_shop\\Scripts\\python.exe",
+    "python.linting.enabled": false
+}
